@@ -40,7 +40,7 @@ def get_post_projects(input_name: str):
     pdf.set_font("Arial", size=10)
 
     try:
-        extractImg(name, html_content)
+        extractImg(html_content)
         pdf, img_h = revertb64ToImg(name=name, pdfile=pdf)
         print(f"Gambar {input_name} berhasil disimpan!")
     except:
@@ -64,10 +64,3 @@ def get_post_projects(input_name: str):
     os.remove('image-data.txt')
     os.remove('temp_image.png')
     os.remove('postprojs.txt')
-
-
-    
-
-
-# nama = input("Masukkan nama dosen: ")
-# get_post_projects(nama)

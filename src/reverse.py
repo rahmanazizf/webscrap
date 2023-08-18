@@ -5,7 +5,10 @@ from fpdf import FPDF
 import os
 
 def revertb64ToImg(name :str, pdfile:FPDF, path: str = 'image-data.txt'):
-    """Reverting bytes data extracted from html to image"""
+    """
+    Reverting bytes data extracted from html to image
+    
+    """
     # Read base64 data from text file
     input_file_path = path
 
@@ -22,10 +25,6 @@ def revertb64ToImg(name :str, pdfile:FPDF, path: str = 'image-data.txt'):
     temp_image_path = 'temp_image.png'
     image.save(temp_image_path)
 
-    # Create PDF
-    # pdf = FPDF()
-    # pdf.add_page()
-
     # Calculate width and height to maintain aspect ratio
     img_width, img_height = image.size
     pdf_width = 40  # A4 width in mm
@@ -41,14 +40,5 @@ def revertb64ToImg(name :str, pdfile:FPDF, path: str = 'image-data.txt'):
               h=pdf_height
               )
 
-    # Output PDF
-    # output_pdf_path = f'image_to_pdf_{"-".join(name.lower().split())}.pdf'
-    # pdfile.output(output_pdf_path)
-
-    # print(f"Image converted and saved to {output_pdf_path}")
     return pdfile, pdf_height
 
-    # Clean up temporary image file
-    # os.remove(temp_image_path)
-
-# revertb64ToImg("Rukman Hertadi")
