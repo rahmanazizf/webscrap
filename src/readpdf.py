@@ -45,6 +45,9 @@ def get_post_projects(input_name: str):
         print(f"Gambar {input_name} berhasil disimpan!")
     except:
         print("Gagal mengonversi gambar")
+        os.remove('docs.html')
+        os.remove('postprojs.txt')
+        os.remove('image-data.txt')
 
     with open("postprojs.txt", "r", encoding="utf-8") as txt:
         entry = 1

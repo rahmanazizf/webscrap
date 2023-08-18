@@ -1,5 +1,4 @@
 from src.readpdf import get_post_projects
-import os
 
 welcome = """
 ==========================================================
