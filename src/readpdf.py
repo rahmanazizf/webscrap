@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from fpdf import FPDF
-from writebytes import extractImg
-from reverse import revertb64ToImg
+from .writebytes import extractImg
+from .reverse import revertb64ToImg
 import os
 
 def get_post_projects(input_name: str):
@@ -69,5 +69,5 @@ def get_post_projects(input_name: str):
     
 
 
-nama = input("Masukkan nama dosen: ")
-get_post_projects(nama)
+# nama = input("Masukkan nama dosen: ")
+# get_post_projects(nama)
