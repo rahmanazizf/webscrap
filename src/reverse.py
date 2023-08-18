@@ -2,7 +2,6 @@ import base64
 import io
 from PIL import Image
 from fpdf import FPDF
-import os
 
 def revertb64ToImg(name :str, pdfile:FPDF, path: str = 'image-data.txt'):
     """

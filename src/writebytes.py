@@ -1,9 +1,4 @@
-import requests
 from bs4 import BeautifulSoup
-# from fpdf import FPDF
-# import base64
-# from PIL import Image
-# from io import BytesIO
 
 # Get HTML document from web page
 def extractImg(html):
